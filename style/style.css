@@ -1,0 +1,289 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: Bahnschrift;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0,200,200);
+    position: fixed;
+}
+
+.logo-name{
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.purple{
+    color: rgb(200, 0, 200);
+    animation: color-gradient 5s ease infinite;
+}
+
+@keyframes color-gradient{
+    10%{
+        color: rgb(0,200,200);
+    }
+    20%{
+        color: rgb(200, 200, 0);
+    }
+    30%{
+        color: rgb(200, 100, 0);
+    }
+    40%{
+        color: rgb(0, 0, 255);
+    }
+    50%{
+        color: #fff;
+    }
+}
+
+nav{
+    text-align: center;
+    background-color: rgb(0,170,100);
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+.service{
+    padding: 20px 20px;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    background-color: rgb(0,170,100);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0px 5px 1px rgb(82, 80, 80);
+}
+
+.dropdown li a{
+    display: block;
+    padding: 20px 10px;
+}
+
+.dropmenu:hover .dropdown{
+    display: block;
+}
+
+.drop-icon{
+    transition: 0.5s;
+}
+
+.dropmenu:hover .drop-icon{
+    transform: rotateZ(360deg);
+}
+
+.slider{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: rgb(0, 255, 255);
+}
+
+.display-fx{
+    display: flex;
+    justify-content: space-around;
+}
+
+.first-product{
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s;
+    margin: 20px 0px;
+}
+
+.first-product:hover{
+    box-shadow: 0 0 0 0;
+    box-shadow: 0 0 1px 1px grey;
+}
+
+.first-product img{
+    max-width: 300px;
+    min-height: 100px;
+}
+
+.product-name{
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-header{
+    text-align: center;
+    font-weight: lighter;
+    line-height: 100px;
+}
+
+.intro-text{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 90, 90);
+    font-style: italic;
+}
+
+.price{
+    color: rgb(20, 200, 20);
+}
+
+.first-product a{
+    text-decoration: none;
+    border: 1px solid red;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    display: block;
+    color: red;
+    text-align: center;
+}
+
+.first-product a:hover{
+    transform: translateY(-5px);
+    background-color: red;
+    color: #fff;
+    box-shadow: 0 5px 0 0 rgb(200, 0,0);
+}
+
+.first-product a:active{
+    transform: translateY(0px);
+    box-shadow: 0 0 0 0;
+}
+
+.shop{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: rgb(0,190,190);
+}
+
+.white{
+    color: #fff;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.contacts{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.contact{
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    background: #00F7FF;
+    margin: 5% 0;
+}
+
+.contact img{
+    max-width: 200px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 90, 90);
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.contact img:hover{
+    transform: scale(2);
+    border-radius: 0px;
+}
+
+.profession{
+    color: rgb(0, 90, 90);
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.description{
+    line-height: 30px;
+    font-size: 17px;
+}
+
+.contact a{
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+    background: transparent;
+    color: rgb(0, 100, 100);
+    text-decoration: none;
+    font-family: Bahnschrift;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact a span{
+    position: absolute;
+	height: 350px;
+    width: 350px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #98FCFF;
+	opacity: 0;
+    z-index: -1;
+	border-radius: 50%;
+}
+
+.contact a:hover span{
+    animation: button_animation 0.8s ease;
+}
+
+@keyframes button_animation{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.geolocation{
+    margin: 50px 0px;
+}
+
+.geo-text{
+    text-align: center;
+    margin: 30px 0;
+}
